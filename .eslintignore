@@ -1,3 +1,6 @@
 assets/dependencies/**/*.js
+assets/api/docs/*
+node_modules/*
 views/**/*.ejs
+config/env/*
 
