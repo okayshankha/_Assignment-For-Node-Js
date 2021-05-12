@@ -21,4 +21,15 @@ module.exports = {
 
   // Any custom configurations
   custom: {},
+
+  // Mongoose configuration
+  mongoose: {
+    uri: process.env.MONGO_TEST_CONNECTION_STRING,
+    connectionOpts: {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false
+    }
+  },
 };
