@@ -38,4 +38,4 @@ module.exports.blueprints = {
 
   // shortcuts: true,
 
-};
+}

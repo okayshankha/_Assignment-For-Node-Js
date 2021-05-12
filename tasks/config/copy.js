@@ -36,7 +36,7 @@ module.exports = function(grunt) {
         dest: '.tmp/public/dist'
       }]
     },
-  });
+  })
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   // This Grunt plugin is part of the default asset pipeline in Sails,
@@ -62,4 +62,4 @@ module.exports = function(grunt) {
   // ```
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-};
+}

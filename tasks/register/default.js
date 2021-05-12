@@ -21,7 +21,7 @@ module.exports = function (grunt) {
     // 'babel',        //« uncomment to ALSO transpile during development (for broader browser compat.)
     'linkAssets',
     'watch'
-  ]);
+  ])
 
 
-};
+}

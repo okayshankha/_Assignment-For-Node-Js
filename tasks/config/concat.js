@@ -21,7 +21,7 @@ module.exports = function(grunt) {
       src: require('../pipeline').cssFilesToInject,
       dest: '.tmp/public/concat/production.css'
     }
-  });
+  })
 
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   // This Grunt plugin is part of the default asset pipeline in Sails,
@@ -47,4 +47,4 @@ module.exports = function(grunt) {
   // ```
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-};
+}

@@ -12,5 +12,5 @@ module.exports = function(grunt) {
     'clean:dev',
     'less:dev',
     'copy:dev',
-  ]);
-};
+  ])
+}
