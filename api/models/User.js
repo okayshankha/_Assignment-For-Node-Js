@@ -1,11 +1,78 @@
 /**
- * User.js
+ * Users.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
 
+
 module.exports = {
 
-}
+  // createdAt and updatedAt fields will be generated automatically
+  schema: {
+    name: { type: String, required: true },
+    dob: { type: Date, required: true },
+    address: { type: String },
+    description: { type: String, required: true }
+  },
 
+
+  /**
+   * constructSchema()
+   *
+   * @param  {Dictionary} schemaDefinedAbove
+   * @param  {SailsApp} sails
+   * @return {MongooseSchema}
+   */
+  constructSchema: function (schemaDefinition, sails) {
+
+    // Create the schema
+    const schema = new sails.mongoose.Schema(schemaDefinition, {
+      autoIndex: true,
+      versionKey: false,
+      timestamps: true
+    })
+
+    // Before Save Hook
+    schema.pre('save', (next) => {
+      // const user = this
+
+      next()
+    })
+
+
+    /**
+     * *************************************************
+     *        S T A T I C   M E T H O D S
+     * *************************************************
+     */
+
+    // Function to check if any document exits with the given email or username
+    schema.static('getById', async (value, projection = {}) => {
+      const user = await User.findOne({ _id: value }, projection)
+      return user
+    })
+
+    // Function to check if any document exits with the given email or username
+    schema.static('getByUsername', async function (username) {
+      return this.find({ username })
+    })
+
+    // Function to check if any document exits with the given email or username
+    schema.static('getByEmail', async function (email) {
+      return this.find({ email })
+    })
+
+
+
+    /**
+     * *************************************************
+     *        I N S T A N C E   M E T H O D S
+     * *************************************************
+     */
+
+
+    return schema
+  },
+
+}
