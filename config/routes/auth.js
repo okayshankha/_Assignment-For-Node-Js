@@ -12,7 +12,7 @@
 module.exports.route = {
 
   /**
-   * @api {post} /api/v1/auth/login 1. User Creation
+   * @api {post} /api/v1/auth/register 1. User Creation
    * @apiName LoginAuth
    * @apiGroup Auth
    *
