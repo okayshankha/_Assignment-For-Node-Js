@@ -10,5 +10,5 @@
  */
 
 module.exports.bootstrap = async function() {
-
+  await sails.helpers.keyGenerator.with()
 }

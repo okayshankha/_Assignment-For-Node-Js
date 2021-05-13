@@ -13,8 +13,10 @@ function registerRoutes(...routes) {
 // Import the custom routes
 const AuthRoutes = require('./routes/auth')
 const UserRoutes = require('./routes/user')
+const FriendRoutes = require('./routes/friend')
 
 module.exports.routes = registerRoutes(
-    AuthRoutes,
-    UserRoutes
+  AuthRoutes,
+  UserRoutes,
+  FriendRoutes
 )

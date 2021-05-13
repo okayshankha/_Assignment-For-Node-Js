@@ -10,10 +10,13 @@ module.exports = {
 
   // createdAt and updatedAt fields will be generated automatically
   schema: {
+    email: { type: String, required: true, unique: true },
     name: { type: String, required: true },
     dob: { type: Date, required: true },
-    address: { type: String },
-    description: { type: String },
+    address: String,
+    latitude: { type: Number, required: true },
+    longitude: { type: Number, required: true },
+    description: String,
     isActive: { type: Boolean, default: true },
   },
 

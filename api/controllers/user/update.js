@@ -14,7 +14,9 @@ module.exports = {
     name: { type: 'string' },
     dob: { type: 'string' },
     address: { type: 'string' },
-    description: { type: 'string' }
+    description: { type: 'string' },
+    latitude: { type: 'number' },
+    longitude: { type: 'number' }
   },
 
 
@@ -42,7 +44,9 @@ module.exports = {
       name,
       dob,
       address,
-      description
+      description,
+      latitude,
+      longitude
     } = inputs
 
     // Throe error if no data to update
@@ -81,6 +85,8 @@ module.exports = {
     user.dob = dob || user.dob
     user.address = address || user.address
     user.description = description || user.description
+    user.latitude = latitude || user.latitude
+    user.longitude = longitude || user.longitude
 
     // Check if valid
     await user.isValid()

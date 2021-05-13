@@ -7,10 +7,13 @@ module.exports = {
   description: 'Register auth.',
 
   inputs: {
+    email: { type: 'string', required: true },
     name: { type: 'string', required: true },
     dob: { type: 'string', required: true },
     address: { type: 'string' },
-    description: { type: 'string' }
+    description: { type: 'string' },
+    latitude: { type: 'number', required: true },
+    longitude: { type: 'number', required: true }
   },
 
 
@@ -34,10 +37,13 @@ module.exports = {
 
     // Get the request payloads
     const {
+      email,
       name,
       dob,
       address,
-      description
+      description,
+      latitude,
+      longitude
     } = inputs
 
 
@@ -50,12 +56,22 @@ module.exports = {
       })
     }
 
+    const existingUser = await User.findOne({ email }).lean()
+
+    if (existingUser) {
+      return exits.conflict('Email is taken.')
+    }
+
+
     // Try to create a user
     const user = new User({
+      email,
       name,
       dob,
       address,
-      description
+      description,
+      latitude,
+      longitude
     })
 
     // Check if valid
