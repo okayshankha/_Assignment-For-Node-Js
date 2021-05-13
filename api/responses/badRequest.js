@@ -6,7 +6,7 @@ module.exports = function badRequest(optionalData = {}) {
 
   if (typeof optionalData === 'string') {
     optionalData = {
-      problems: [optionalData]
+      errors: [optionalData]
     }
   }
 

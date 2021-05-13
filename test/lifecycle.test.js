@@ -5,12 +5,15 @@ var _ = require('lodash')
 // Before running any tests...
 before(function (done) {
 
-  // Increase the Mocha timeout so that Sails has enough time to lift, even if you have a bunch of assets.
+  // Increase the Mocha timeout so that Sails has enough time to lift.
   this.timeout(10000)
 
+  // Load env variables
   require('dotenv').config()
 
+  // Set test env
   process.env.NODE_ENV = 'test'
+  process.env.PORT = 10000
 
   // Lift Sails and start the server
   sails.lift({}, (err) => done(err, sails))

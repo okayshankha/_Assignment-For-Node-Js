@@ -11,8 +11,8 @@ module.exports = {
 
   inputs: {
     userId: { type: 'string', required: true },
-    name: { type: 'string', required: true },
-    dob: { type: 'string', required: true },
+    name: { type: 'string' },
+    dob: { type: 'string' },
     address: { type: 'string' },
     description: { type: 'string' }
   },
@@ -45,15 +45,23 @@ module.exports = {
       description
     } = inputs
 
+    // Throe error if no data to update
+    if (!name && !dob && !address && !description) {
+      return exits.badRequest('No data to update.')
+    }
+
 
     // Check if the data format is correct
-    const isValidDate = await sails.helpers.dateFormatChecker.with({ date: dob, inPast: true })
-    if (!isValidDate) {
-      return exits.badRequest({
-        statusCodeToSet: 422,
-        errors: [`Invalid date (expected Format: "${sails.config.custom.DEFAULT_DATE_FORMAT}") and should be in past.`]
-      })
+    if (dob) {
+      const isValidDate = await sails.helpers.dateFormatChecker.with({ date: dob, inPast: true })
+      if (!isValidDate) {
+        return exits.badRequest({
+          statusCodeToSet: 422,
+          errors: [`Invalid date (expected Format: "${sails.config.custom.DEFAULT_DATE_FORMAT}") and should be in past.`]
+        })
+      }
     }
+
 
     // Give error if the provided user id is not a valid mongo id
     if (!_user || !ObjectId.isValid(_user)) {
@@ -69,10 +77,10 @@ module.exports = {
     }
 
     // Try to update the user data
-    user.name = name
-    user.dob = dob
-    user.address = address
-    user.description = description
+    user.name = name || user.name
+    user.dob = dob || user.dob
+    user.address = address || user.address
+    user.description = description || user.description
 
     // Check if valid
     await user.isValid()

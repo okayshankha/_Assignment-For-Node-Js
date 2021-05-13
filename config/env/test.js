@@ -1,4 +1,9 @@
 module.exports = {
+  // Disable the Morgan hook during running the tests
+  hooks: {
+    grunt: false,
+    'request-logger': false
+  },
 
   // Configure your security settings for production.     
   security: {
@@ -8,7 +13,7 @@ module.exports = {
 
   // Set the production log level.   
   log: {
-    level: 'debug'
+    level: 'error'
   },
 
   http: {
