@@ -7,6 +7,7 @@ module.exports = {
   description: 'Register auth.',
 
   inputs: {
+    email: { type: 'string', required: true },
     name: { type: 'string', required: true },
     dob: { type: 'string', required: true },
     address: { type: 'string' },
@@ -34,6 +35,7 @@ module.exports = {
 
     // Get the request payloads
     const {
+      email,
       name,
       dob,
       address,
@@ -52,6 +54,7 @@ module.exports = {
 
     // Try to create a user
     const user = new User({
+      email,
       name,
       dob,
       address,

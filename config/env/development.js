@@ -21,7 +21,9 @@ module.exports = {
 
   // Any custom configurations
   custom: {
-    DEFAULT_DATE_FORMAT: process.env.DEFAULT_DATE_FORMAT || 'YYYY-MM-DD'
+    DEFAULT_DATE_FORMAT: process.env.DEFAULT_DATE_FORMAT || 'YYYY-MM-DD',
+    JWT_SECRET: process.env.JWT_SECRET,
+    JWT_EXPIRY: process.env.JWT_EXPIRY,
   },
 
   // Mongoose configuration

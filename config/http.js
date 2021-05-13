@@ -29,16 +29,14 @@ module.exports.http = {
     *                                                                          *
     ***************************************************************************/
 
-    // order: [
-    //   'cookieParser',
-    //   'session',
-    //   'bodyParser',
-    //   'compress',
-    //   'poweredBy',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    // ],
+    passportInit: require('passport').initialize(),
+    passportSession: require('passport').session(),
+
+    order: [
+      'passportInit',
+      'passportSession',
+      'bodyParser'
+    ],
 
 
     /***************************************************************************
@@ -49,11 +47,11 @@ module.exports.http = {
     *                                                                          *
     ***************************************************************************/
 
-    // bodyParser: (function _configureBodyParser(){
-    //   var skipper = require('skipper');
-    //   var middlewareFn = skipper({ strict: true });
-    //   return middlewareFn;
-    // })(),
+    bodyParser: (function _configureBodyParser(){
+      var skipper = require('skipper');
+      var middlewareFn = skipper({ strict: true });
+      return middlewareFn;
+    })(),
 
   },
 

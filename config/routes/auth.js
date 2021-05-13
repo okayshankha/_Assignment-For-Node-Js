@@ -13,4 +13,9 @@ module.exports.route = {
 
   'POST /api/v1/auth/register': { action: 'auth/register' },
 
+
+  'GET /api/v1/auth/google': { action: 'auth/google/google-auth' },
+
+  'GET /api/v1/auth/google/callback': { action: 'auth/google/google-auth-callback' },
+
 }
