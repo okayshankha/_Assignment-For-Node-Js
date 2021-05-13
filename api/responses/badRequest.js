@@ -20,8 +20,9 @@ module.exports = function badRequest(optionalData = {}) {
 
     // Message to display
     message = 'Bad Request.',
+
     // Problem Statements
-    problems: errors
+    errors
 
   } = optionalData
 

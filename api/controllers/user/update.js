@@ -1,5 +1,4 @@
 const ObjectId = require('mongoose').Types.ObjectId
-const moment = require('moment')
 
 module.exports = {
 
@@ -46,7 +45,15 @@ module.exports = {
       description
     } = inputs
 
-    const dateOfBirth = moment(dob, 'YYYY-MM-DD').toDate()
+
+    // Check if the data format is correct
+    const isValidDate = await sails.helpers.dateFormatChecker.with({ date: dob, inPast: true })
+    if (!isValidDate) {
+      return exits.badRequest({
+        statusCodeToSet: 422,
+        errors: [`Invalid date (expected Format: "${sails.config.custom.DEFAULT_DATE_FORMAT}") and should be in past.`]
+      })
+    }
 
     // Give error if the provided user id is not a valid mongo id
     if (!_user || !ObjectId.isValid(_user)) {

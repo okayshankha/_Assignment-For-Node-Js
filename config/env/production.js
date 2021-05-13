@@ -20,7 +20,9 @@ module.exports = {
   port: parseInt(process.env.PORT),
 
   // Any custom configurations
-  custom: {},
+  custom: {
+    DEFAULT_DATE_FORMAT: process.env.DEFAULT_DATE_FORMAT || 'YYYY-MM-DD'
+  },
 
   // Mongoose configuration
   mongoose: {

@@ -3,7 +3,7 @@ module.exports = {
   // Configure your security settings for production.     
   security: {
     // If this app has CORS enabled(see `config/security.js`) with the
-    cors: { },
+    cors: {},
   },
 
   // Set the production log level.   
@@ -20,7 +20,9 @@ module.exports = {
   port: parseInt(process.env.PORT),
 
   // Any custom configurations
-  custom: {},
+  custom: {
+    DEFAULT_DATE_FORMAT: process.env.DEFAULT_DATE_FORMAT || 'YYYY-MM-DD'
+  },
 
   // Mongoose configuration
   mongoose: {

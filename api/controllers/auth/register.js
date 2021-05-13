@@ -1,5 +1,3 @@
-const moment = require('moment')
-
 module.exports = {
 
 
@@ -42,7 +40,15 @@ module.exports = {
       description
     } = inputs
 
-    const dateOfBirth = moment(dob, 'YYYY-MM-DD').toDate()
+
+    // Check if the data format is correct
+    const isValidDate = await sails.helpers.dateFormatChecker.with({ date: dob, inPast: true })
+    if (!isValidDate) {
+      return exits.badRequest({
+        statusCodeToSet: 422,
+        errors: [`Invalid date (expected Format: "${sails.config.custom.DEFAULT_DATE_FORMAT}") and should be in past.`]
+      })
+    }
 
     // Try to create a user
     const user = new User({
