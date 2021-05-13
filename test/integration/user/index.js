@@ -9,16 +9,22 @@ describe('User', () => {
     'name': 'Shankha',
     'dob': '2000-01-21',
     'address': 'A/4 School Bazar',
-    'description': 'description'
+    'description': 'description',
+    'latitude': 22.416017,
+    'longitude': 87.326930
   }
 
   const userUpdatePayloadMissingOptionalFields = {
     'name': 'Shankha2',
+    'latitude': 22.416017,
+    'longitude': 87.326930,
     'dob': '2000-01-21'
   }
 
   const userUpdatePayloadMissingOptionalFieldsAndNameField = {
-    'dob': '2005-01-21'
+    'dob': '2005-01-21',
+    'latitude': 22.416017,
+    'longitude': 87.326930
   }
 
 
@@ -27,7 +33,9 @@ describe('User', () => {
     user = new sails.models.user({
       email: 'shankhascm96@gmail.com',
       name: 'Shankhadeep Das',
-      dob: Date('1996-01-21')
+      dob: Date('1996-01-21'),
+      latitude: 22.416017,
+      longitude: 87.326930
     })
     await user.isValid()
     await user.save()
