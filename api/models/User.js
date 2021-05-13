@@ -47,20 +47,15 @@ module.exports = {
      * *************************************************
      */
 
-    // Function to check if any document exits with the given email or username
-    schema.static('getById', async (value, projection = {}) => {
-      const user = await User.findOne({ _id: value }, projection)
-      return user
+    // Function to check if any document exits with the given id
+    schema.static('getById', (_id, projection = {}) => {
+      return User.findOne({ _id }, projection)
     })
 
-    // Function to check if any document exits with the given email or username
-    schema.static('getByUsername', async function (username) {
-      return this.find({ username })
-    })
 
-    // Function to check if any document exits with the given email or username
-    schema.static('getByEmail', async function (email) {
-      return this.find({ email })
+    // Function to check if any document exits with the given email
+    schema.static('getByEmail', (email, projection = {}) => {
+      return User.find({ email }, projection)
     })
 
 
