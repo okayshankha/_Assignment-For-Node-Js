@@ -1,13 +1,18 @@
-/**
- * Route Mappings
- * (sails.config.routes)
- *
- * Your routes tell Sails what to do each time it receives a request.
- *
- * For more information on configuring custom routes, check out:
- * https://sailsjs.com/anatomy/config/routes-js
- */
+const _ = require('lodash')
 
-module.exports.routes = {
+function registerRoutes(...routes) {
+    let customRoutes = {}
+    for (let index = 0; index < routes.length; index++) {
+        const route = routes[index].route
+        customRoutes = _.merge(customRoutes, route)
+    }
 
+    return customRoutes
 }
+
+// Import the custom routes
+const AuthRoutes = require('./routes/auth')
+
+module.exports.routes = registerRoutes(
+    AuthRoutes
+)
