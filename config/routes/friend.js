@@ -16,16 +16,16 @@ module.exports.route = {
    * @api {post} /api/v1/friends 1. Create Friend
    * @apiName CreateFriend
    * @apiGroup Friends
-   * 
+   *
    * @apiHeader Authorization Bearer Token.
-   * 
+   *
    * @apiParam (Body) {String} friendId User id of the user you want to be friend.
    *
    * @apiParamExample {json} Request-Example:
    * {
    *     "friendId": "609d19464da09840f084926b"
    * }
-   * 
+   *
    * @apiSuccessExample Success:
    * 201 CREATED
    * {
@@ -62,9 +62,9 @@ module.exports.route = {
    * @api {get} /api/v1/friends 2. Get All Friends
    * @apiName GetAllFriend
    * @apiGroup Friends
-   * 
+   *
    * @apiHeader Authorization Bearer Token.
-   * 
+   *
    * @apiSuccessExample Success:
    * 200 OK
    * {
@@ -112,11 +112,11 @@ module.exports.route = {
    * @api {get} /api/v1/friends:nearby 3. Get All Nearby Friends
    * @apiName GetAllNearbyFriend
    * @apiGroup Friends
-   * 
+   *
    * @apiHeader Authorization Bearer Token.
-   * 
+   *
    * @apiParam (Query) {String} maximumDistanceInMeters Maximum Distance (In Meters) to find the friends.
-   * 
+   *
    * @apiSuccessExample Success:
    * 200 OK
    * {

@@ -53,7 +53,7 @@ module.exports.route = {
    * @api {get} /api/v1/users/:userId 2. Get User By Id
    * @apiName GetUserById
    * @apiGroup Users
-   * 
+   *
    * @apiParam (Path) {String} userId User id.
    *
    * @apiSuccessExample Success:
@@ -95,9 +95,9 @@ module.exports.route = {
    * @api {patch} /api/v1/users/:userId 3. Update User By Id
    * @apiName UpdateUserById
    * @apiGroup Users
-   * 
+   *
    * @apiParam (Path) {String} userId User id.
-   * 
+   *
    * @apiParam (Body) {String} name Name of the User.
    * @apiParam (Body) {String} dob Date of birth of the User.
    * @apiParam (Body) {String} address Address of the User.
@@ -114,7 +114,7 @@ module.exports.route = {
    *   "latitude": 22.416017,
    *   "longitude": 87.326930
    * }
-   * 
+   *
    * @apiSuccessExample Success:
    * 200 OK
    * {
@@ -153,7 +153,7 @@ module.exports.route = {
    * @api {delete} /api/v1/users/:userId 4. Delete User By Id (Soft Delete)
    * @apiName SoftDeleteUserById
    * @apiGroup Users
-   * 
+   *
    * @apiParam (Path) {String} userId User id.
    *
    * @apiSuccessExample Success:
@@ -195,7 +195,7 @@ module.exports.route = {
    * @api {post} /api/v1/users:undelete/:userId 4. Undo delete User By Id (Soft Delete)
    * @apiName UndoSoftDeleteUserById
    * @apiGroup Users
-   * 
+   *
    * @apiParam (Path) {String} userId User id.
    *
    * @apiSuccessExample Success:

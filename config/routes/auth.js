@@ -76,7 +76,7 @@ module.exports.route = {
    * @api {get} /api/v1/auth/google 2. Login With Google
    * @apiName GoogleLoginAuth
    * @apiGroup Auth
-   * 
+   *
    *
    * @apiDescription Login with Google, If the user is only registered by the /api/v1/auth/register API, then only it generates a token, else it will say unauthorized.
    */
