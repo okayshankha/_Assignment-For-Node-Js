@@ -56,6 +56,13 @@ module.exports = {
       })
     }
 
+    const existingUser = await User.findOne({ email }).lean()
+
+    if (existingUser) {
+      return exits.conflict('Email is taken.')
+    }
+
+
     // Try to create a user
     const user = new User({
       email,

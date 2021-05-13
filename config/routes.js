@@ -16,7 +16,7 @@ const UserRoutes = require('./routes/user')
 const FriendRoutes = require('./routes/friend')
 
 module.exports.routes = registerRoutes(
-    AuthRoutes,
-    UserRoutes,
+  AuthRoutes,
+  UserRoutes,
   FriendRoutes
 )

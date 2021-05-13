@@ -24,7 +24,6 @@ module.exports.policies = {
   'auth/register': true,
   'auth/google/google-auth': true,
   'auth/google/google-auth-callback': true,
-
   'user/update': true,
   'user/get-all': true,
   'user/get': true,
