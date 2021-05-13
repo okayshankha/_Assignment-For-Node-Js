@@ -13,7 +13,8 @@ module.exports = {
     name: { type: String, required: true },
     dob: { type: Date, required: true },
     address: { type: String },
-    description: { type: String, required: true }
+    description: { type: String },
+    isActive: { type: Boolean, default: true },
   },
 
 

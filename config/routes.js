@@ -12,7 +12,9 @@ function registerRoutes(...routes) {
 
 // Import the custom routes
 const AuthRoutes = require('./routes/auth')
+const UserRoutes = require('./routes/user')
 
 module.exports.routes = registerRoutes(
-    AuthRoutes
+    AuthRoutes,
+    UserRoutes
 )
