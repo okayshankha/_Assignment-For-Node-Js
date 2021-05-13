@@ -1,22 +1,21 @@
 /**
- * Users.js
+ * Friend.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
 
 
+const ObjectId = require('mongoose').Types.ObjectId
 module.exports = {
+
 
   // createdAt and updatedAt fields will be generated automatically
   schema: {
-    email: { type: String, required: true, unique: true },
-    name: { type: String, required: true },
-    dob: { type: Date, required: true },
-    address: String,
-    latitude: { type: Number, required: true },
-    longitude: { type: Number, required: true },
-    description: String,
+    _users: [{
+      type: ObjectId,
+      ref: 'user'
+    }],
     isActive: { type: Boolean, default: true },
   },
 
@@ -39,7 +38,7 @@ module.exports = {
 
     // Before Save Hook
     schema.pre('save', (next) => {
-      // const user = this
+      // const friendMap = this
 
       next()
     })
@@ -75,3 +74,5 @@ module.exports = {
   },
 
 }
+
+

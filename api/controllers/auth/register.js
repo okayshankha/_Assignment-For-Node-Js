@@ -11,7 +11,9 @@ module.exports = {
     name: { type: 'string', required: true },
     dob: { type: 'string', required: true },
     address: { type: 'string' },
-    description: { type: 'string' }
+    description: { type: 'string' },
+    latitude: { type: 'number', required: true },
+    longitude: { type: 'number', required: true }
   },
 
 
@@ -39,7 +41,9 @@ module.exports = {
       name,
       dob,
       address,
-      description
+      description,
+      latitude,
+      longitude
     } = inputs
 
 
@@ -58,7 +62,9 @@ module.exports = {
       name,
       dob,
       address,
-      description
+      description,
+      latitude,
+      longitude
     })
 
     // Check if valid
