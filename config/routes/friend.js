@@ -51,6 +51,10 @@ module.exports.route = {
    * @apiSuccess {Boolean} data.items Friends information
    *
    *
+   * @apiUse ValidationError
+   * @apiUse Unauthorized
+   * @apiUse BadRequest
+   *
    * @apiDescription Update user by id
    */
   'POST /api/v1/friends': { action: 'friend/create' },
@@ -100,6 +104,9 @@ module.exports.route = {
    * @apiSuccess {Boolean} data.message User friendly message.
    * @apiSuccess {Boolean} data.items.__users Friend information
    *
+   * @apiUse ValidationError
+   * @apiUse Unauthorized
+   * @apiUse BadRequest
    *
    * @apiDescription Update user by id
    */
@@ -152,6 +159,9 @@ module.exports.route = {
    * @apiSuccess {Boolean} data.message User friendly message.
    * @apiSuccess {Boolean} data.items._users Friend information
    *
+   * @apiUse ValidationError
+   * @apiUse Unauthorized
+   * @apiUse BadRequest
    *
    * @apiDescription Update user by id
    */
