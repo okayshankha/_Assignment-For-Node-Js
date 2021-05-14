@@ -150,7 +150,7 @@ module.exports.route = {
    *
    * @apiSuccess {Object} data Success Response Object.
    * @apiSuccess {Boolean} data.message User friendly message.
-   * @apiSuccess {Boolean} data.items.__users Friend information
+   * @apiSuccess {Boolean} data.items._users Friend information
    *
    *
    * @apiDescription Update user by id
