@@ -7,7 +7,7 @@
 - npm start
 
 ## 2. Description
-- For this project I have user SailsJS Framework, and to connect the Mongo DB database in user Mongoose ODM (Object Document Mapper)
+- For this project I have user SailsJS Framework. To connect the Mongo DB database I have used Mongoose ODM (Object Document Mapper)
 - All the models are stored in *api/models* folder
 - All the Control Logic is divided in to chunks (known as actions in Sails), and stored in */api/controllers/xxx/xxx.js*
 - We also have helpers, where we can keep independent codes, or codes thats is used multiple time in multiple **actions**
