@@ -64,7 +64,6 @@ module.exports.route = {
    *
    *
    * @apiUse ValidationError
-   * @apiUse Unauthorized
    * @apiUse Conflict
    * @apiUse BadRequest
    *
