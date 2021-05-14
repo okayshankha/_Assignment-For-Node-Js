@@ -27,3 +27,5 @@ Great, Now open your browser, and hit this url http://localhost:5006/api/docs
 
 ### NOTE: 
 When you are using a protected route from the API UI, don't forget to put 'Bearer <token>'
+
+#### Also an online demo is available at https://code.branchotfix.com/api/docs
