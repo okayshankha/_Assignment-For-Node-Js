@@ -19,14 +19,8 @@ module.exports.policies = {
 
   '*': 'isLoggedIn',
 
-
   // Public Access
   'auth/register': true,
-  'auth/google/google-auth': true,
-  'auth/google/google-auth-callback': true,
-  'user/update': true,
-  'user/get-all': true,
-  'user/get': true,
-  'user/un-delete': true,
-  'user/delete': true,
+  'auth/google/*': true,
+  'user/*': true
 }

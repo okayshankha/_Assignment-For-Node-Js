@@ -227,7 +227,26 @@ define({ "api": [
     "description": "<p>Update user by id</p>",
     "version": "0.0.0",
     "filename": "config/routes/friend.js",
-    "groupTitle": "Friends"
+    "groupTitle": "Friends",
+    "error": {
+      "examples": [
+        {
+          "title": "Validation Error",
+          "content": "422 Unprocessable\n{\n    \"error\": {\n        \"message\": \"Received incoming request (`{METHOD} /api/v1/xxx/xxx`), but could not run action.\",\n        \"errors\": [\n            \"Invalid \\\"{field_name}\\\":\\n  · Value ('xyz') was not passed the validation criteria\"\n        ]\n    }\n}",
+          "type": "json"
+        },
+        {
+          "title": "Unauthorized",
+          "content": "401 Unauthorized\n{\n    \"error\": {\n        \"message\": \"Unauthorized.\"\n    }\n}",
+          "type": "json"
+        },
+        {
+          "title": "Bad Request",
+          "content": "400 Bad Request\n{\n    \"error\": {\n        \"message\": \"Bad Request.\",\n        \"errors\": [\n            \"Some error message.\"\n        ]\n    }\n}",
+          "type": "json"
+        }
+      ]
+    }
   },
   {
     "type": "get",
@@ -284,7 +303,26 @@ define({ "api": [
     "description": "<p>Update user by id</p>",
     "version": "0.0.0",
     "filename": "config/routes/friend.js",
-    "groupTitle": "Friends"
+    "groupTitle": "Friends",
+    "error": {
+      "examples": [
+        {
+          "title": "Validation Error",
+          "content": "422 Unprocessable\n{\n    \"error\": {\n        \"message\": \"Received incoming request (`{METHOD} /api/v1/xxx/xxx`), but could not run action.\",\n        \"errors\": [\n            \"Invalid \\\"{field_name}\\\":\\n  · Value ('xyz') was not passed the validation criteria\"\n        ]\n    }\n}",
+          "type": "json"
+        },
+        {
+          "title": "Unauthorized",
+          "content": "401 Unauthorized\n{\n    \"error\": {\n        \"message\": \"Unauthorized.\"\n    }\n}",
+          "type": "json"
+        },
+        {
+          "title": "Bad Request",
+          "content": "400 Bad Request\n{\n    \"error\": {\n        \"message\": \"Bad Request.\",\n        \"errors\": [\n            \"Some error message.\"\n        ]\n    }\n}",
+          "type": "json"
+        }
+      ]
+    }
   },
   {
     "type": "get",
@@ -354,7 +392,26 @@ define({ "api": [
     "description": "<p>Update user by id</p>",
     "version": "0.0.0",
     "filename": "config/routes/friend.js",
-    "groupTitle": "Friends"
+    "groupTitle": "Friends",
+    "error": {
+      "examples": [
+        {
+          "title": "Validation Error",
+          "content": "422 Unprocessable\n{\n    \"error\": {\n        \"message\": \"Received incoming request (`{METHOD} /api/v1/xxx/xxx`), but could not run action.\",\n        \"errors\": [\n            \"Invalid \\\"{field_name}\\\":\\n  · Value ('xyz') was not passed the validation criteria\"\n        ]\n    }\n}",
+          "type": "json"
+        },
+        {
+          "title": "Unauthorized",
+          "content": "401 Unauthorized\n{\n    \"error\": {\n        \"message\": \"Unauthorized.\"\n    }\n}",
+          "type": "json"
+        },
+        {
+          "title": "Bad Request",
+          "content": "400 Bad Request\n{\n    \"error\": {\n        \"message\": \"Bad Request.\",\n        \"errors\": [\n            \"Some error message.\"\n        ]\n    }\n}",
+          "type": "json"
+        }
+      ]
+    }
   },
   {
     "type": "get",
