@@ -26,6 +26,7 @@ Great, Now open your browser, and hit this url http://localhost:5006/api/docs
 - If all goes well, the system will issue a Bearer token, which you can use to access the protected routes such as **friends**
 
 ### NOTE: 
-When you are using a protected route from the API UI, don't forget to put 'Bearer <token>'
+- When you are using a protected route from the API UI, don't forget to put 'Bearer {token}' format
+- Only the *friends* routes are protected routes, and auth, users are open endpoints.
 
 #### Also an online demo is available at https://code.branchotfix.com/api/docs
