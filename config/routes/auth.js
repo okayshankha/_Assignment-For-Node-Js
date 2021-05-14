@@ -86,7 +86,7 @@ module.exports.route = {
 
 
   /**
-   * @api {get} /api/v1/auth/google/callback 2. Login With Google
+   * @api {get} /api/v1/auth/google/callback 3. Login With Google Callback
    * @apiName GoogleLoginCallbackAuth
    * @apiGroup Auth
    *
