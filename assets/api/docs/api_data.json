@@ -11,8 +11,19 @@
     "groupTitle": "Auth"
   },
   {
+    "type": "get",
+    "url": "/api/v1/auth/google/callback",
+    "title": "2. Login With Google",
+    "name": "GoogleLoginCallbackAuth",
+    "group": "Auth",
+    "description": "<p>Callback url for Google login</p>",
+    "version": "0.0.0",
+    "filename": "config/routes/auth.js",
+    "groupTitle": "Auth"
+  },
+  {
     "type": "post",
-    "url": "/api/v1/auth/login",
+    "url": "/api/v1/auth/register",
     "title": "1. User Creation",
     "name": "LoginAuth",
     "group": "Auth",
@@ -334,7 +345,7 @@
             "group": "Success 200",
             "type": "Boolean",
             "optional": false,
-            "field": "data.items.__users",
+            "field": "data.items._users",
             "description": "<p>Friend information</p>"
           }
         ]
