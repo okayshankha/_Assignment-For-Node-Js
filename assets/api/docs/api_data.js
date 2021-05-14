@@ -13,7 +13,7 @@ define({ "api": [
   {
     "type": "get",
     "url": "/api/v1/auth/google/callback",
-    "title": "2. Login With Google",
+    "title": "3. Login With Google Callback",
     "name": "GoogleLoginCallbackAuth",
     "group": "Auth",
     "description": "<p>Callback url for Google login</p>",
